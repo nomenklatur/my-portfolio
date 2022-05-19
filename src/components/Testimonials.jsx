@@ -18,7 +18,7 @@ export default function Testimonials() {
         <Slide>
          {testimonials.map((testimonial, index)=> (
             <div className="each-slide" key={index}>
-              <div className="p-4 w-1/2 mx-auto">
+              <div className="p-4 w-1/2 md:w-full mx-auto">
               <div className="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
                 <TerminalIcon className="block w-8 text-gray-500 mb-4" />
                 <p className="leading-relaxed mb-6">{testimonial.quote}</p>

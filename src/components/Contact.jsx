@@ -10,8 +10,10 @@ export default function Contact() {
 
     emailjs.sendForm('service_defchyc', 'template_go7vjnl', form.current, 'RbtaqAGBWMzE_Wwi7')
       .then((result) => {
+          alert('Your message have been sent');
           console.log(result.text);
       }, (error) => {
+          alert('Oops something went wrong. Please try again in a minute');
           console.log(error.text);
       });
   };
