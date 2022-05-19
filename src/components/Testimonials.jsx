@@ -3,6 +3,8 @@
 import React from "react";
 import { TerminalIcon, UsersIcon } from "@heroicons/react/solid";
 import { testimonials } from "../data";
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
 
 export default function Testimonials() {
   return (
@@ -12,9 +14,11 @@ export default function Testimonials() {
         <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
           Client Testimonials
         </h1>
-        <div className="flex flex-wrap m-4">
-          {testimonials.map((testimonial) => (
-            <div className="p-4 md:w-1/2 w-full">
+        <div className="slide-container">
+        <Slide>
+         {testimonials.map((testimonial, index)=> (
+            <div className="each-slide" key={index}>
+              <div className="p-4 w-1/2 mx-auto">
               <div className="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
                 <TerminalIcon className="block w-8 text-gray-500 mb-4" />
                 <p className="leading-relaxed mb-6">{testimonial.quote}</p>
@@ -35,8 +39,10 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+            </div>
+          ))} 
+        </Slide>
+      </div>
       </div>
     </section>
   );
