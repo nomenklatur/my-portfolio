@@ -64,7 +64,7 @@ export default function Contact() {
             Reach Me
           </h2>
           <p className="leading-relaxed mb-5">
-            If there's something you need to talk about with me, kindly send me an email or reach me through my social media.
+            If there's something you need to talk about with me, kindly send me an email, reach my social media, or contact me through this form.
           </p>
           <div className="relative mb-4">
             <label htmlFor="user_name" className="leading-7 text-sm text-gray-400">
